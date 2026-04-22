@@ -1,31 +1,37 @@
-# Atualizador Validacao
+# 🚀 Organizador de Validacoes
 
-Aplicativo desktop em Python criado para reduzir o trabalho manual na rotina de:
+Aplicativo desktop em Python para acelerar uma rotina de trabalho que antes era manual:
 
 1. Gerar relatorio de atendimentos.
-2. Filtrar os dados com regras de negocio.
-3. Enviar os resultados para outra planilha de validacao.
+2. Filtrar registros com regras de negocio.
+3. Enviar os dados para uma planilha de validacao.
 
-Com esse projeto, o processo fica mais rapido, seguro e padronizado.
+Resultado: mais velocidade, menos erro humano e processo padronizado. ✅
 
-## Download rapido
+## 🔗 Repositorio oficial
 
-- Executavel direto: [dist/AtualizadorValidacao.exe](dist/AtualizadorValidacao.exe)
-- Pacote zip: [dist/AtualizadorValidacao.zip](dist/AtualizadorValidacao.zip)
-- Configuracao do atualizador: [dist/update_config.json](dist/update_config.json)
+- Usuario: **3Gb3**
+- Projeto: **Organizador_Validacoes**
+- Link: https://github.com/3Gb3/Organizador_Validacoes
 
-## Fluxo da automacao
+## 📦 Download rapido
+
+- Executavel: [dist/AtualizadorValidacao.exe](dist/AtualizadorValidacao.exe)
+- Pacote completo: [dist/AtualizadorValidacao.zip](dist/AtualizadorValidacao.zip)
+- Configuracao do updater: [dist/update_config.json](dist/update_config.json)
+
+## 🧭 Fluxo da automacao
 
 ```mermaid
 flowchart LR
-		A[Selecionar relatorio] --> B[Aplicar filtros]
-		B --> C[Selecionar planilha de validacao]
-		C --> D[Gerar backup automatico]
-		D --> E[Inserir dados com mapeamento]
-		E --> F[Resumo final da execucao]
+    A[Selecionar relatorio] --> B[Aplicar filtros]
+    B --> C[Selecionar planilha de validacao]
+    C --> D[Gerar backup automatico]
+    D --> E[Inserir dados com mapeamento]
+    E --> F[Resumo final da execucao]
 ```
 
-## Funcionalidades
+## ✨ Funcionalidades
 
 - Interface grafica com CustomTkinter.
 - Leitura de arquivos .xls, .xlsx, .xlsm e .csv.
@@ -35,33 +41,32 @@ flowchart LR
 - Preservacao de formato da planilha durante insercao.
 - Ajuste automatico da tabela do Excel quando necessario.
 - Backup automatico antes da escrita.
-- Botao Atualizar aplicativo no .exe para baixar a ultima versao publicada na branch main do GitHub.
+- Botao Atualizar aplicativo no executavel.
 
-## Atualizacao automatica no executavel
+## 🔄 Atualizacao automatica no executavel
 
-O botao Atualizar aplicativo funciona no .exe compilado e faz:
+Ao clicar em **Atualizar aplicativo**, o app:
 
-1. Consulta ao GitHub para localizar o arquivo mais recente na branch main.
-2. Download do novo executavel.
-3. Substituicao do .exe atual.
-4. Reinicio automatico do aplicativo.
+1. Consulta a branch main do GitHub.
+2. Baixa a versao mais recente do executavel.
+3. Substitui o .exe atual automaticamente.
+4. Reinicia o app ja atualizado.
 
-### Configuracao necessaria
+### ⚙️ Configuracao usada
 
-O projeto ja vem configurado para o repositorio padrao `gabri/Projeto_Validacao`.
-Se o repositorio for diferente, edite [update_config.json](update_config.json):
+Arquivo: [update_config.json](update_config.json)
 
 ```json
 {
-	"repo_owner": "gabri",
-	"repo_name": "Projeto_Validacao",
-	"branch": "main",
-	"asset_path": "dist/AtualizadorValidacao.exe",
-	"timeout_seconds": 60
+  "repo_owner": "3Gb3",
+  "repo_name": "Organizador_Validacoes",
+  "branch": "main",
+  "asset_path": "dist/AtualizadorValidacao.exe",
+  "timeout_seconds": 60
 }
 ```
 
-## Como rodar localmente
+## ▶️ Como rodar localmente
 
 ### 1. Criar e ativar ambiente virtual (Windows PowerShell)
 
@@ -82,39 +87,39 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## Como gerar o executavel
+## 🛠️ Como gerar o executavel
 
 ```powershell
 pip install -r requirements-dev.txt
 pyinstaller --noconfirm --clean --windowed --onefile --name "AtualizadorValidacao" --collect-data customtkinter main.py
 ```
 
-Saida:
+Saida esperada:
 
 - dist/AtualizadorValidacao.exe
 
-## Estrutura do projeto
+## 📁 Estrutura do projeto
 
 - main.py: interface e logica de processamento
-- update_config.json: configuracao do botao de atualizacao automatica
+- update_config.json: configuracao do botao de atualizacao
 - requirements.txt: dependencias de execucao
-- requirements-dev.txt: dependencias de desenvolvimento/build
-- dist/: executavel para distribuicao
+- requirements-dev.txt: dependencias de build
+- dist/: arquivos para distribuicao
 
-## Publicar no GitHub
+## ☁️ Publicar no GitHub
 
-Se ainda nao existir repositorio local:
+Se precisar configurar do zero:
 
 ```powershell
 git init -b main
 git add .
-git commit -m "feat: versao inicial do atualizador"
-git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+git commit -m "feat: versao inicial do organizador"
+git remote add origin https://github.com/3Gb3/Organizador_Validacoes.git
 git push -u origin main
 ```
 
-## Observacoes
+## 📝 Observacoes
 
-- O .venv e a pasta build ficam fora do versionamento.
-- O executavel em [dist/AtualizadorValidacao.exe](dist/AtualizadorValidacao.exe) permanece no projeto para download direto.
-- O pacote [dist/AtualizadorValidacao.zip](dist/AtualizadorValidacao.zip) inclui o .exe e o `update_config.json` para facilitar distribuicao.
+- .venv e build ficam fora do versionamento.
+- O executavel fica no projeto para download direto.
+- O zip inclui o .exe e o update_config.json para facilitar distribuicao.
