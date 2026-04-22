@@ -91,7 +91,7 @@ python main.py
 
 ```powershell
 pip install -r requirements-dev.txt
-pyinstaller --noconfirm --clean --windowed --onefile --name "GbValidacoes" --collect-data customtkinter main.py
+pyinstaller --noconfirm --clean --windowed --onefile --name "GbValidacoes" --icon logo_app.png --add-data "logo_app.png;." --collect-data customtkinter main.py
 ```
 
 Saida esperada:

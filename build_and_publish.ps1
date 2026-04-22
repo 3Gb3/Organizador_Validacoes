@@ -29,7 +29,8 @@ Write-Step "Validando pre-requisitos"
 $requiredFiles = @(
     "main.py",
     "update_config.json",
-    "requirements-dev.txt"
+    "requirements-dev.txt",
+    "logo_app.png"
 )
 
 foreach ($file in $requiredFiles) {
@@ -60,6 +61,8 @@ Run-Command $pythonExe @(
     "--windowed",
     "--onefile",
     "--name", "GbValidacoes",
+    "--icon", "logo_app.png",
+    "--add-data", "logo_app.png;.",
     "--collect-data", "customtkinter",
     "main.py"
 )

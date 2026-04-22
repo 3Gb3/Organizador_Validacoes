@@ -38,6 +38,7 @@ ROW_DETECTION_HEADERS = {
 	"PROTOCOLO",
 }
 APP_EXECUTABLE_NAME = "GbValidacoes.exe"
+APP_LOGO_FILE = "logo_app.png"
 UPDATE_CONFIG_FILE = "update_config.json"
 UPDATE_USER_AGENT = "GbValidacoesUpdater/1.0"
 
@@ -46,6 +47,12 @@ def get_app_directory() -> str:
 	if getattr(sys, "frozen", False):
 		return os.path.dirname(os.path.abspath(sys.executable))
 	return os.path.dirname(os.path.abspath(__file__))
+
+
+def get_resource_path(relative_path: str) -> str:
+	if hasattr(sys, "_MEIPASS"):
+		return os.path.join(str(getattr(sys, "_MEIPASS")), relative_path)
+	return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
 
 
 def load_update_config() -> dict[str, object]:
@@ -773,6 +780,8 @@ class ValidationApp:
 		self.root.geometry("980x620")
 		self.root.minsize(940, 600)
 		self.root.configure(fg_color="#0b0d11")
+		self._window_icon: tk.PhotoImage | None = None
+		self._apply_window_icon()
 
 		self.report_path_var = tk.StringVar()
 		self.validation_path_var = tk.StringVar()
@@ -791,6 +800,17 @@ class ValidationApp:
 		self._set_summary("Selecione o relatório, o arquivo de validação e a aba de destino.")
 		self._set_status("Aguardando arquivos", tone="neutral")
 		self._update_execute_state()
+
+	def _apply_window_icon(self) -> None:
+		icon_path = get_resource_path(APP_LOGO_FILE)
+		if not os.path.isfile(icon_path):
+			return
+
+		try:
+			self._window_icon = tk.PhotoImage(file=icon_path)
+			self.root.iconphoto(True, self._window_icon)
+		except tk.TclError:
+			self._window_icon = None
 
 	def _build_ui(self) -> None:
 		wrapper = ctk.CTkFrame(self.root, fg_color="transparent")
