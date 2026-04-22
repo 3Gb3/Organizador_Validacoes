@@ -37,9 +37,9 @@ ROW_DETECTION_HEADERS = {
 	"NOTA",
 	"PROTOCOLO",
 }
-APP_EXECUTABLE_NAME = "AtualizadorValidacao.exe"
+APP_EXECUTABLE_NAME = "GbValidacoes.exe"
 UPDATE_CONFIG_FILE = "update_config.json"
-UPDATE_USER_AGENT = "AtualizadorValidacaoUpdater/1.0"
+UPDATE_USER_AGENT = "GbValidacoesUpdater/1.0"
 
 
 def get_app_directory() -> str:
@@ -167,7 +167,7 @@ def download_update_executable(
 
 
 def create_update_script(target_executable: str, downloaded_executable: str) -> str:
-	script_path = os.path.join(tempfile.gettempdir(), "atualizador_validacao_update.bat")
+	script_path = os.path.join(tempfile.gettempdir(), "gb_validacoes_update.bat")
 	script_content = "\r\n".join(
 		[
 			"@echo off",
@@ -769,7 +769,7 @@ class ArrowStepper(ctk.CTkFrame):
 class ValidationApp:
 	def __init__(self, root: ctk.CTk) -> None:
 		self.root = root
-		self.root.title("Atualizador Validação")
+		self.root.title("GbValidacoes")
 		self.root.geometry("980x620")
 		self.root.minsize(940, 600)
 		self.root.configure(fg_color="#0b0d11")
@@ -811,7 +811,7 @@ class ValidationApp:
 
 		ctk.CTkLabel(
 			header,
-			text="Atualizador Validação",
+			text="GbValidacoes",
 			font=ctk.CTkFont(size=24, weight="bold"),
 			text_color="#f3f4f6",
 		).grid(row=0, column=0, sticky="w", padx=18, pady=(14, 2))

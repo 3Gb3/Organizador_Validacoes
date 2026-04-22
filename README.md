@@ -1,4 +1,4 @@
-# 🚀 Organizador de Validacoes
+# 🚀 GbValidacoes
 
 Aplicativo desktop em Python para acelerar uma rotina de trabalho que antes era manual:
 
@@ -16,8 +16,8 @@ Resultado: mais velocidade, menos erro humano e processo padronizado. ✅
 
 ## 📦 Download rapido
 
-- Executavel: [dist/AtualizadorValidacao.exe](dist/AtualizadorValidacao.exe)
-- Pacote completo: [dist/AtualizadorValidacao.zip](dist/AtualizadorValidacao.zip)
+- Executavel: [dist/GbValidacoes.exe](dist/GbValidacoes.exe)
+- Pacote completo: [dist/GbValidacoes.zip](dist/GbValidacoes.zip)
 - Configuracao do updater: [dist/update_config.json](dist/update_config.json)
 
 ## 🧭 Fluxo da automacao
@@ -61,7 +61,7 @@ Arquivo: [update_config.json](update_config.json)
   "repo_owner": "3Gb3",
   "repo_name": "Organizador_Validacoes",
   "branch": "main",
-  "asset_path": "dist/AtualizadorValidacao.exe",
+  "asset_path": "dist/GbValidacoes.exe",
   "timeout_seconds": 60
 }
 ```
@@ -91,12 +91,12 @@ python main.py
 
 ```powershell
 pip install -r requirements-dev.txt
-pyinstaller --noconfirm --clean --windowed --onefile --name "AtualizadorValidacao" --collect-data customtkinter main.py
+pyinstaller --noconfirm --clean --windowed --onefile --name "GbValidacoes" --collect-data customtkinter main.py
 ```
 
 Saida esperada:
 
-- dist/AtualizadorValidacao.exe
+- dist/GbValidacoes.exe
 
 ## 📁 Estrutura do projeto
 

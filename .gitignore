@@ -11,8 +11,8 @@ env/
 # Build artifacts
 build/
 dist/*
-!dist/AtualizadorValidacao.exe
-!dist/AtualizadorValidacao.zip
+!dist/GbValidacoes.exe
+!dist/GbValidacoes.zip
 !dist/update_config.json
 
 # Tool caches
