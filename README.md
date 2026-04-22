@@ -98,6 +98,26 @@ Saida esperada:
 
 - dist/GbValidacoes.exe
 
+## ⚡ Build automatica de artefatos
+
+Voce atualiza executavel e arquivos de distribuicao com 1 comando usando [build_and_publish.ps1](build_and_publish.ps1):
+
+```powershell
+.\build_and_publish.ps1
+```
+
+Esse comando faz:
+
+1. Instala dependencias de build.
+2. Gera o executavel `dist/GbValidacoes.exe`.
+3. Atualiza `dist/update_config.json`.
+4. Regera `dist/GbValidacoes.zip`.
+
+Importante:
+
+- O script nao executa `git add`, `git commit` ou `git push`.
+- A publicacao no GitHub fica manual para voce controlar quando enviar.
+
 ## 📁 Estrutura do projeto
 
 - main.py: interface e logica de processamento
