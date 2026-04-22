@@ -106,18 +106,6 @@ Saida esperada:
 - requirements-dev.txt: dependencias de build
 - dist/: arquivos para distribuicao
 
-## ☁️ Publicar no GitHub
-
-Se precisar configurar do zero:
-
-```powershell
-git init -b main
-git add .
-git commit -m "feat: versao inicial do organizador"
-git remote add origin https://github.com/3Gb3/Organizador_Validacoes.git
-git push -u origin main
-```
-
 ## 📝 Observacoes
 
 - .venv e build ficam fora do versionamento.
