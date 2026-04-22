@@ -16,9 +16,9 @@ Resultado: mais velocidade, menos erro humano e processo padronizado. ✅
 
 ## 📦 Download rapido
 
-- Executavel: [dist/GbValidacoes.exe](dist/GbValidacoes.exe)
-- Pacote completo: [dist/GbValidacoes.zip](dist/GbValidacoes.zip)
-- Configuracao do updater: [dist/update_config.json](dist/update_config.json)
+- Executavel: [GbValidacoes.exe](https://github.com/3Gb3/Organizador_Validacoes/raw/main/dist/GbValidacoes.exe)
+- Pacote completo: [GbValidacoes.zip](https://github.com/3Gb3/Organizador_Validacoes/raw/main/dist/GbValidacoes.zip)
+- Configuracao do updater: [update_config.json (dist)](https://github.com/3Gb3/Organizador_Validacoes/raw/main/dist/update_config.json)
 
 ## 🧭 Fluxo da automacao
 
@@ -54,7 +54,7 @@ Ao clicar em **Atualizar aplicativo**, o app:
 
 ### ⚙️ Configuracao usada
 
-Arquivo: [update_config.json](update_config.json)
+Arquivo: [update_config.json](https://github.com/3Gb3/Organizador_Validacoes/blob/main/update_config.json)
 
 ```json
 {
